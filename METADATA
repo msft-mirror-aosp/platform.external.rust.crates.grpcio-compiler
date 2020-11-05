@@ -1,0 +1,19 @@
+name: "grpcio-compiler"
+description: "gRPC compiler for grpcio"
+third_party {
+  url {
+    type: HOMEPAGE
+    value: "https://crates.io/crates/grpcio-compiler"
+  }
+  url {
+    type: ARCHIVE
+    value: "https://static.crates.io/crates/grpcio-compiler/grpcio-compiler-0.6.0.crate"
+  }
+  version: "0.6.0"
+  license_type: NOTICE
+  last_upgrade_date {
+    year: 2020
+    month: 10
+    day: 29
+  }
+}
