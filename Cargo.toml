@@ -13,7 +13,7 @@
 [package]
 edition = "2018"
 name = "grpcio-compiler"
-version = "0.6.0"
+version = "0.7.0"
 authors = ["The TiKV Project Developers"]
 description = "gRPC compiler for grpcio"
 homepage = "https://github.com/tikv/grpc-rs"
