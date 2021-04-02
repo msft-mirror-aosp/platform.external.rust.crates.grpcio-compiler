@@ -13,7 +13,7 @@
 [package]
 edition = "2018"
 name = "grpcio-compiler"
-version = "0.7.0"
+version = "0.8.0"
 authors = ["The TiKV Project Developers"]
 description = "gRPC compiler for grpcio"
 homepage = "https://github.com/tikv/grpc-rs"
@@ -31,15 +31,15 @@ version = "0.5"
 optional = true
 
 [dependencies.prost]
-version = "0.6"
+version = "0.7"
 optional = true
 
 [dependencies.prost-build]
-version = "0.6"
+version = "0.7"
 optional = true
 
 [dependencies.prost-types]
-version = "0.6"
+version = "0.7"
 optional = true
 
 [dependencies.protobuf]
