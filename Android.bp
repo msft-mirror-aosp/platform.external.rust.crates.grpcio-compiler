@@ -65,4 +65,4 @@ rust_library_host {
 }
 
 // dependent_library ["feature_list"]
-//   protobuf-2.22.1
+//   protobuf-2.24.1
