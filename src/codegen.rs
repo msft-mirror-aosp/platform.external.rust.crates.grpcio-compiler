@@ -151,6 +151,10 @@ impl<'a> CodeWriter<'a> {
         }
     }
 
+    pub fn fn_def(&mut self, sig: &str) {
+        self.write_line(&format!("fn {};", sig));
+    }
+
     pub fn fn_block<F>(&mut self, public: bool, sig: &str, cb: F)
     where
         F: Fn(&mut CodeWriter),
@@ -498,7 +502,7 @@ impl<'a> MethodGen<'a> {
             MethodType::Duplex => ("stream", req_stream_type, "DuplexSink"),
         };
         let sig = format!(
-            "{}(&mut self, ctx: {}, _{}: {}, sink: {}<{}>)",
+            "{}(&mut self, ctx: {}, {}: {}, sink: {}<{}>)",
             self.name(),
             fq_grpc("RpcContext"),
             req,
@@ -506,9 +510,7 @@ impl<'a> MethodGen<'a> {
             fq_grpc(resp_type),
             self.output()
         );
-        w.fn_block(false, &sig, |w| {
-            w.write_line("grpcio::unimplemented_call!(ctx, sink)");
-        });
+        w.fn_def(&sig);
     }
 
     fn write_bind(&self, w: &mut CodeWriter) {
