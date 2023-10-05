@@ -1,6 +1,8 @@
 {
-  "patch": "patches/Android.bp.patch",
   "dependencies": true,
   "run": true,
-  "tests": true
+  "tests": true,
+  "dep-suffixes": {
+    "protobuf": "_deprecated"
+  }
 }
