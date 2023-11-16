@@ -1,8 +1,0 @@
-{
-  "dependencies": true,
-  "run": true,
-  "tests": true,
-  "dep-suffixes": {
-    "protobuf": "_deprecated"
-  }
-}
