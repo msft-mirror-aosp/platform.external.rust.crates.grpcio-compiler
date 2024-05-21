@@ -40,7 +40,7 @@ rust_binary_host {
     crate_name: "grpc_rust_plugin",
     cargo_env_compat: true,
     cargo_pkg_version: "0.12.1",
-    srcs: ["src/bin/grpc_rust_plugin.rs"],
+    crate_root: "src/bin/grpc_rust_plugin.rs",
     edition: "2018",
     features: [
         "default",
@@ -58,7 +58,7 @@ rust_test_host {
     crate_name: "grpcio_compiler",
     cargo_env_compat: true,
     cargo_pkg_version: "0.12.1",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -78,7 +78,7 @@ rust_library_host {
     crate_name: "grpcio_compiler",
     cargo_env_compat: true,
     cargo_pkg_version: "0.12.1",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     edition: "2018",
     features: [
         "default",
